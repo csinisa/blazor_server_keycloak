@@ -1,0 +1,31 @@
+﻿@inject NavigationManager Navigation
+
+
+@if (_isAuthenticated)
+{
+    <p>Sorry, you don't have access rights for this page. Try logging in with a different user or contact your administrator.</p>
+}
+else
+{
+    <p>Authenticating...</p>
+}
+
+@code {
+
+    [CascadingParameter]
+    private Task<AuthenticationState> _authenticationStateTask { get; set; }
+
+    private bool _isAuthenticated;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await _authenticationStateTask;
+
+        _isAuthenticated = authState.User.Identity.IsAuthenticated;
+
+        if (!_isAuthenticated)
+        {
+            Navigation.NavigateTo($"Login?redirectUri={Uri.EscapeDataString(Navigation.Uri)}", true);
+        }
+    }
+}
