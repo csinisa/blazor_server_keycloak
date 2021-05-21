@@ -60,7 +60,7 @@ Keycloak has two types of [user roles](https://www.keycloak.org/docs/latest/serv
 
 ### Make sure roles are included in the user profile.
 
-This is an important step. By default user roles are not included in the user profile, nor the token. 
+This is an important step. By default user roles are not included in the user profile. 
 This demo sample is reading the user roles from the user profile, so we must make sure user roles are included in the user profile.
 
 12. Include client roles in the user profile
@@ -85,4 +85,5 @@ If you log in with `myuser`, you should be able to access weather data, but coun
 
 ## Examine the code
 
-All required changes are in a single [commit](https://github.com/csinisa/blazor_server_keycloak/commit/4a20c0e7155feaf549d271e8ee56aaca9bf22bb9).
+All the required changes needed to enable Keycloak authentication on a vanilla Blazor Server application 
+are in a single [commit](https://github.com/csinisa/blazor_server_keycloak/commit/4a20c0e7155feaf549d271e8ee56aaca9bf22bb9).
