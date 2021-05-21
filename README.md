@@ -24,20 +24,20 @@ Create a new client named `my-blazor-server-app` in the realm named "myrealm".
     - Root URL: `https://localhost:44322/`
 5. Click `Save`
 
-![](doc\images\screenshot_01_client_add.png?raw=true)
+![](doc/images/screenshot_01_client_add.png?raw=true)
 
 ### Edit the new client's access type
 
 6. Set the new client's access type to "confidential"
 7. Click `Save`. After this, a new tab "Credentials" will be visible.
 
-![](doc\images\screenshot_02_client_set_access_type.png?raw=true)
+![](doc/images/screenshot_02_client_set_access_type.png?raw=true)
 
 ### Record the client id and secret
 
 8. Open the 'Credentials' tab and make sure "Client id and secret" is set the 'Client authenticator'. Also not the secret - this will be used in our blazor application that is being secured.
 
-![](doc\images\screenshot_03_credentials.png?raw=true)
+![](doc/images/screenshot_03_credentials.png?raw=true)
 
 ### Define roles for the client application
 
@@ -48,15 +48,15 @@ Keycloak has two types of [user roles](https://www.keycloak.org/docs/latest/serv
 9. Edit the newly created client application and select the 'Roles' tab. 
 10. Add two roles to the `my-blazor-server-app`:
     - `blazor-admin`
-		- `blazor-operator`
+    - `blazor-operator`
 
-![](doc\images\screenshot_04_client_roles.png?raw=true)
+![](doc/images/screenshot_04_client_roles.png?raw=true)
 
 ### Assign roles to a user
 
 11. Assign the `blazor-operator` role to the `myuser` user account.
 
-![](doc\images\screenshot_05_user_roles.png?raw=true)
+![](doc/images/screenshot_05_user_roles.png?raw=true)
 
 ### Make sure roles are included in the user profile.
 
@@ -65,9 +65,9 @@ This demo sample is reading the user roles from the user profile, so we must mak
 
 12. Include client roles in the user profile
 
-![](doc\images\screenshot_06_client_scopes_01.png?raw=true)
-![](doc\images\screenshot_07_client_scopes_02.pngraw=true)
-![](doc\images\screenshot_08_client_scopes_03.png?raw=true)
+![](doc/images/screenshot_06_client_scopes_01.png?raw=true)
+![](doc/images/screenshot_07_client_scopes_02.png?raw=true)
+![](doc/images/screenshot_08_client_scopes_03.png?raw=true)
 
 ## Run the sample application
 
@@ -80,8 +80,8 @@ This demo sample is reading the user roles from the user profile, so we must mak
 If you try to access the counter or fetch data menu, the application will redirect you to Keycloak login. 
 If you log in with `myuser`, you should be able to access weather data, but counter will not be available because it requires the `blazor-admin` role.
 
-![](doc\images\screenshot_09_blazor_01.png?raw=true)
-![](doc\images\screenshot_10_blazor_02.png?raw=true)
+![](doc/images/screenshot_09_blazor_01.png?raw=true)
+![](doc/images/screenshot_10_blazor_02.png?raw=true)
 
 ## Examine the code
 
