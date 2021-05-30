@@ -35,7 +35,7 @@ Create a new client named `my-blazor-server-app` in the realm named "myrealm".
 
 ### Record the client id and secret
 
-8. Open the 'Credentials' tab and make sure "Client id and secret" is set the 'Client authenticator'. Also not the secret - this will be used in our blazor application that is being secured.
+8. Open the 'Credentials' tab and make sure "Client id and secret" is set the 'Client authenticator'. Also note the secret - this will be used in our blazor application that is being secured.
 
 ![](doc/images/screenshot_03_credentials.png?raw=true)
 
